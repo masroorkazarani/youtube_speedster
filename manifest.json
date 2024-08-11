@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "yt-pb-calc",
+    "version": "1.4",
+    "author": "kurtnettle",
+    "description": "shows you the video duration for different playback speed.",
+    "action": {
+        "default_icon": {
+            "48": "addon.svg",
+            "96": "addon.svg",
+            "128": "addon.svg"
+        }
+    },
+    "icons": {
+        "48": "addon.svg",
+        "96": "addon.svg",
+        "128": "addon.svg"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.youtube.com/*"
+            ],
+            "js": [
+                "dist/bundle.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "permissions": [
+        "activeTab"
+    ]
+}
